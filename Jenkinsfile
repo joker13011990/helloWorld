@@ -31,7 +31,7 @@ pipeline {
 
    agent none
    stages {
-       stage("first") {
+       stage('first') {
            sh "echo ${FOO}"
        }
    }
