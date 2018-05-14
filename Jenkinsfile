@@ -9,7 +9,9 @@ pipeline {
    stages {
        stage('first') {
            //sh "echo ${FOO}"
+		   stage("WS Cleanup") {
 		   echo("hello world")
+		   }
        }
    }
 }
