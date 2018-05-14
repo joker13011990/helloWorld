@@ -1,25 +1,14 @@
 #!/usr/bin/env groovy
 
-
 pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                echo("hello jenkins Build") 
-            }
-        }
-        stage('Test') { 
-            steps {
-                //
-                echo("hello jenkins from") 				
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-                echo("hello jenkins from Deploy") 
-            }
-        }
-     }
-    }
+   environment {
+     FOO = "foo"
+   }
+
+   agent any
+   stages {
+       stage("first") {
+           sh "echo ${FOO}"
+       }
+   }
+}
