@@ -7,8 +7,9 @@ pipeline {
 
    agent any
    stages {
-       stage("first") {
-           sh "echo ${FOO}"
+       stage('first') {
+           //sh "echo ${FOO}"
+		   echo("hello world")
        }
    }
 }
